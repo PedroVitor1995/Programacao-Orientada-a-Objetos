@@ -11,7 +11,7 @@ public class TestaEquipamentos {
         equipamento1.inverte();
         System.out.println("Status: "+equipamento1.estaLigado());
 
-        if(equipamento1.estaLigado() == true){
+        if(equipamento1.estaLigado()){
             System.out.println("Equipamento Ligado");
         }
         else{
@@ -25,7 +25,7 @@ public class TestaEquipamentos {
         equipamento2.inverte();
         System.out.println("Status: "+equipamento2.estaLigado());
 
-        if(equipamento2.estaLigado() == true){
+        if(equipamento2.estaLigado()){
             System.out.println("Equipamento Ligado");
         }
         else{
