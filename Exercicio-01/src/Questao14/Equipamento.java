@@ -4,22 +4,17 @@ public class Equipamento {
     boolean ligado;
 
     public void liga(){
-        if(estaLigado() == false)
+        if(!estaLigado())
             ligado = true;
     }
 
     public void desliga(){
-        if(estaLigado() == true)
+        if(estaLigado())
             ligado = false;
     }
 
     public void inverte(){
-        if(estaLigado() == true){
-            ligado = false;
-        }
-        else{
-            ligado = true;
-        }
+        ligado = !estaLigado();
     }
 
     public boolean estaLigado(){
