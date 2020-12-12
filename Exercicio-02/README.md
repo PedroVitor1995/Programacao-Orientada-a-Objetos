@@ -27,6 +27,6 @@ Passar um valor como parâmetro no construtor da classe TestaRadio
 
 # Questão 06
 
-a) O resuldo é o mesmo 90, pois c1 passar apontar para o mesmo objeto de c2
+a) O resultado é o mesmo 90, pois c1 passar apontar para o mesmo objeto de c2
 
 b) O objeto perde a referência pois ela já apontar pra outro objeto
