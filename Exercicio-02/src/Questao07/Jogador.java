@@ -9,8 +9,8 @@ public class Jogador {
         this.pontos = pontos;
     }
 
-    void calculoPontoRelativo(){
-        pontos = this.forca * this.nivel;
+    int calculoPontoRelativo(){
+        return this.forca * this.nivel;
     }
 
     void atacar(Jogador jogador){

@@ -13,7 +13,8 @@ O resultado vai ser zero,pois a variável global e não ao parâmetro do constru
 
 # Questão 04 
 
-O problema o valor da variável vai ser somado duas vezes
+O problema o valor da variável não pode ser acessada fora do método x,pois a variável
+só existe dentro do método
 
     double valor;
 
@@ -27,4 +28,5 @@ Passar um valor como parâmetro no construtor da classe TestaRadio
 # Questão 06
 
 a) O resuldo é o mesmo 90, pois c1 passar apontar para o mesmo objeto de c2
+
 b) O objeto perde a referência pois ela já apontar pra outro objeto
