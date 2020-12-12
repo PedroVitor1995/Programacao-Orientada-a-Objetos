@@ -15,17 +15,33 @@ public class Produto {
         this.quantidadeMinima = 5;
     }
 
+    public int getQuantidade() {
+        return quantidade;
+    }
+
+    public void setQuantidade(int quantidade) {
+        this.quantidade = quantidade;
+    }
+
+    public double getValor() {
+        return valor;
+    }
+
+    public void setValor(double valor) {
+        this.valor = valor;
+    }
+
     void baixar(int quantidade){
         if((this.quantidade - quantidade) >= quantidadeMinima)
-            this.quantidade -= quantidade;
+            setQuantidade(getQuantidade() - quantidade);
     }
 
     void repor(int quantidade){
-        this.quantidade += quantidade;
+        setQuantidade(getQuantidade() + quantidade);
     }
 
     void reajusta(double taxa){
-        this.valor += (this.valor * taxa) / 100;
+        setValor(getValor() + (getValor() * taxa / 100));
     }
 
     @Override
