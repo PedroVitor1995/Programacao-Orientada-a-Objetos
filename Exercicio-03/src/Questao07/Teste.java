@@ -27,7 +27,7 @@ public class Teste {
                 }
             }
         }
-        System.out.println("Array organizado:");
+        System.out.println("Array ordenado:");
         for(i = 0; i<inteiros.length; i++)
             System.out.println(" "+inteiros[i]);
     }
