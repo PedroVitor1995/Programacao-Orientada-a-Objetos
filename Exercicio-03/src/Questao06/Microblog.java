@@ -37,6 +37,9 @@ public class Microblog {
 
             indice--;
         }
+        else{
+            System.out.println("Postagem inexistente.");
+        }
     }
 
     Postagem consultarPostagem(int id) {
@@ -57,5 +60,21 @@ public class Microblog {
             postagem.curtir();
         else
             System.out.println("Postagem inexistente.");
+    }
+
+    Postagem maisCurtida(){
+        Postagem postagem = null;
+        if(indice > 0){
+            postagem = postagems[0];
+            int qtdTemp = postagems[0].qtdCurtidas;
+            for (int i = 0; i < indice; i++) {
+                if(qtdTemp < postagems[i].qtdCurtidas){
+                    qtdTemp = postagems[i].qtdCurtidas;
+                    postagem = postagems[i];
+                }
+            }
+        }
+
+        return postagem;
     }
 }

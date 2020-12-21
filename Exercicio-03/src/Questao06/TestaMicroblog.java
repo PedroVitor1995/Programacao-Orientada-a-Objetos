@@ -14,10 +14,12 @@ public class TestaMicroblog {
         microblog.curtir(2);
         microblog.curtir(2);
 
+        System.out.println("Postagem mais curtida: "+microblog.maisCurtida());
 
-        for (Postagem m:
+        for (Postagem p:
              microblog.postagems) {
-            System.out.println(m);
+            if(p != null)
+                System.out.println("Postagem: "+p);
         }
     }
 }
