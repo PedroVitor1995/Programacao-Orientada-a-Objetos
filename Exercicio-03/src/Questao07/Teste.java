@@ -12,7 +12,7 @@ public class Teste {
         for (i  = 0; i < args.length; i++)
             inteiros[i] = Integer.parseInt(args[i]);
 
-        System.out.println("Vetor desordenado: ");
+        System.out.println("Array desordenado: ");
         for(i = 0; i<inteiros.length; i++)
             System.out.println(" "+inteiros[i]);
 
@@ -27,7 +27,7 @@ public class Teste {
                 }
             }
         }
-        System.out.println("Vetor organizado:");
+        System.out.println("Array organizado:");
         for(i = 0; i<inteiros.length; i++)
             System.out.println(" "+inteiros[i]);
     }
