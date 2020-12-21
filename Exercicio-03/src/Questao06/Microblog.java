@@ -1,7 +1,5 @@
 package Questao06;
 
-import Questao05.Conta;
-
 public class Microblog {
     Postagem[] postagems;
     int indice = 0;
