@@ -6,8 +6,7 @@ public class Teste {
 
 
         int[] inteiros = new int[args.length];
-        int aux = 0;
-        int i = 0;
+        int aux = 0,i = 0;
 
         for (i  = 0; i < args.length; i++)
             inteiros[i] = Integer.parseInt(args[i]);

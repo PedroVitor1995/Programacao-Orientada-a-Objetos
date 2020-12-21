@@ -60,19 +60,49 @@ public class Microblog {
             System.out.println("Postagem inexistente.");
     }
 
-    Postagem maisCurtida(){
-        Postagem postagem = null;
-        if(indice > 0){
-            postagem = postagems[0];
-            int qtdTemp = postagems[0].qtdCurtidas;
-            for (int i = 0; i < indice; i++) {
-                if(qtdTemp < postagems[i].qtdCurtidas){
-                    qtdTemp = postagems[i].qtdCurtidas;
-                    postagem = postagems[i];
-                }
-            }
+    Postagem[] maisCurtida(){
+        int qtd = 0;
+        for (int i = 0; i < postagems.length; i++) {
+            if(postagems[i] != null)
+                qtd++;
         }
 
-        return postagem;
+        Postagem[] postagemsTemp = new Postagem[qtd];
+
+        int posTemp = 0;
+        for(int i = 0; i < postagems.length; i++) {
+            if(postagems[i] != null){
+                postagemsTemp[posTemp] = postagems[i];
+                posTemp++;
+            }
+        }
+        Postagem aux = null;
+
+        Postagem[] maisCurtida = new Postagem[qtd];
+
+        if(indice > 0){
+            for(int i = 0; i<postagemsTemp.length; i++){
+                for(int j = 0; j<postagemsTemp.length-1; j++){
+                    if(postagemsTemp[j].qtdCurtidas > postagemsTemp[j + 1].qtdCurtidas){
+                        aux = postagemsTemp[j];
+                        postagemsTemp[j] = postagemsTemp[j+1];
+                        postagemsTemp[j+1] = aux;
+                    }
+                }
+            }
+
+            int pos = 0;
+            int qtdCurtidas = postagemsTemp[postagemsTemp.length-1].qtdCurtidas;
+
+            for(int i = 0; i<postagemsTemp.length; i++){
+                if(postagemsTemp[i].qtdCurtidas == qtdCurtidas){
+                    maisCurtida[pos] = postagemsTemp[i];
+                    pos++;
+                }
+            }
+
+
+        }
+        return maisCurtida;
     }
 }

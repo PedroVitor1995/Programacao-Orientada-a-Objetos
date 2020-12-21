@@ -14,12 +14,30 @@ public class TestaMicroblog {
         microblog.curtir(2);
         microblog.curtir(2);
 
-        System.out.println("Postagem mais curtida: "+microblog.maisCurtida());
+        System.out.println("Postagem mais curtida");
+        for (Postagem p:
+             microblog.maisCurtida()) {
+            if(p != null)
+                System.out.println("Postagem: "+p);
+        }
 
+        microblog.curtir(2);
+
+        System.out.println("Postagem mais curtida");
+        for (Postagem p:
+                microblog.maisCurtida()) {
+            if(p != null)
+                System.out.println("Postagem: "+p);
+        }
+
+
+        System.out.println("\n Todas as Postagem");
         for (Postagem p:
              microblog.postagems) {
             if(p != null)
                 System.out.println("Postagem: "+p);
         }
+
+
     }
 }
