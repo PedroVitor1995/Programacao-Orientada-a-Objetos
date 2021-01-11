@@ -1,4 +1,4 @@
-package Questao02;
+package Questao07;
 
 import java.util.Scanner;
 
@@ -18,8 +18,8 @@ public class ExecutaBanco {
                     Conta c = new Conta();
                     System.out.println("Cadastro de Conta");
                     System.out.println("Digite o número: ");
-                    c.numero = sc.next ();
-                    c.saldo = sc.nextDouble();
+                    c.setNumero(sc.next ());
+                    c.setSaldo(sc.nextDouble());
                     b.inserir(c);
                     break;
                 case "2":
@@ -27,8 +27,8 @@ public class ExecutaBanco {
                     Conta cc = new Conta();
                     System.out.println("Alteração de Conta");
                     System.out.println("Digite o número: ");
-                    cc.numero = sc.next ();
-                    cc.saldo = sc.nextDouble();
+                    cc.setNumero(sc.next ());
+                    cc.setSaldo(sc.nextDouble());
                     b.alterar(cc);
                     break;
                 case "3":
@@ -48,8 +48,8 @@ public class ExecutaBanco {
                         System.out.println("Conta inexistente.");
                     }
                     else{
-                        System.out.println("Número: " +c.numero);
-                        System.out.println("Saldo: " +c.saldo);
+                        System.out.println("Número: " +c.getNumero());
+                        System.out.println("Saldo: " +c.getSaldo());
                     }
                     break;
                 case "5":
