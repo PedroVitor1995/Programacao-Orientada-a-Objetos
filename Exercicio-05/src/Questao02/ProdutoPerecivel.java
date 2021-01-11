@@ -5,7 +5,7 @@ import java.time.LocalDate;
 public class ProdutoPerecivel extends Produto{
     public LocalDate dataValidade;
 
-    public boolean produtoPerecível(){
+    public boolean produtoPerecivel(){
         if(this.dataValidade.isAfter(LocalDate.now()))
             return true;
         return false;

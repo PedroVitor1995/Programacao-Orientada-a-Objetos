@@ -17,15 +17,13 @@ public class TestaProduto {
         estoque.inserir(produto);
         produto.darBaixa(5);
         produto.repor(30);
-        Produto p = null;
-        p = estoque.consultar("ProdX");
+        Produto p = estoque.consultar("ProdX");
         if(p != null){
             System.out.println(p);
         }
         else{
-            System.out.println("Produto não existe");
+            System.out.println("Produto inexistente.");
         }
-
 
         ProdutoPerecivel produtoPerecivel = new ProdutoPerecivel();
         produtoPerecivel.id = 2;
@@ -33,18 +31,19 @@ public class TestaProduto {
         produtoPerecivel.quantidade = 20;
         produtoPerecivel.valor = 2.50;
         produtoPerecivel.dataValidade = LocalDate.of(2020, 12, 7);
-        System.out.println(produtoPerecivel.produtoPerecível());
+        System.out.println("Produto perecível: " + produtoPerecivel.produtoPerecivel());
         estoque.inserir(produtoPerecivel);
         produtoPerecivel.darBaixa(5);
         produtoPerecivel.repor(30);
-        Produto pp = null;
-        pp = estoque.consultar("ProdY");
+        Produto pp = estoque.consultar("ProdY");
         if(pp != null){
             System.out.println(pp);
         }
         else{
-            System.out.println("Produto não existe");
+            System.out.println("Produto inexistente.");
         }
+
+        estoque.excluir("ProdY");
 
     }
 }

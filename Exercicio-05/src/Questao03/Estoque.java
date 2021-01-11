@@ -44,4 +44,15 @@ public class Estoque {
         }
         return p;
     }
+
+    public void excluir(String descricao) {
+        Produto produto = consultar(descricao);
+        if (produto != null) {
+            produtos.remove(produto);
+            System.out.println("Produto excluido com sucesso!!!");
+        }
+        else{
+            System.out.println("Produto inexistente.");
+        }
+    }
 }
