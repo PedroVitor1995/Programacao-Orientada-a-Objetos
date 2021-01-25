@@ -4,25 +4,20 @@ public class Banco {
 	private Conta[] contas;
 	private int indice = 0;
 
-	public Banco() throws AplicacaoException {
+	public Banco() {
 		contas = new Conta[1];
-		if(indice >= contas.length)
-			throw new AplicacaoException("Número máximo de contas atingido");
 	}
 
-	public Banco(int tamanho) throws AplicacaoException {
+	public Banco(int tamanho){
 		contas = new Conta[tamanho];
-		if(indice >= contas.length)
-			throw new AplicacaoException("Número máximo de contas atingido");
 	}
 
 	public void inserir(Conta c) {
-		if (indice < contas.length) { 
-			contas[indice] = c;
-			indice++;
-		} else {
-			System.out.println("Número máximo de contas atingido");
-		}
+		if(indice >= contas.length)
+			throw new Questao01.AplicacaoException("Número máximo de contas atingido");
+
+		contas[indice] = c;
+		indice++;
 	}
 
 	public Conta consultar(String numero) throws AplicacaoException {
