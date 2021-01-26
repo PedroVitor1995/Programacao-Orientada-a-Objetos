@@ -1,13 +1,13 @@
 # Exercício sobre Exceções
 
-# Questão 06
+# Questão 07
 
 Sim, pois os metodos que são utilizados no método transferir estão sendo validados.
 
 Sim, pois as validações que estão sendo feitas faz com uma operação seja feita feita
 da forma correta sem que aconteça operação não permitida.
 
-# Questão 08
+# Questão 09
 
 Exceção Checada
 
@@ -49,7 +49,7 @@ Exceção não Checada
 Adicionando o throws AplicacaoException aos métodos e aos construtores onde
 são lançadas exception
 
-# Questão 09
+# Questão 10
 
     package Questao09;
 
@@ -95,12 +95,12 @@ são lançadas exception
         }
     }   
 
-# Questão 10
+# Questão 11
 
 Ocorrerá que o código não vai ser compilado, pois a TipoExcecao1 tem
 ser depois da TipoExcecao2 no bloco.
 
-# Questão 11
+# Questão 12
 
 Na classe main será lançada a exceção RuntimeException que estar dentro do
 primeiro try, e seguida será executado o primeiro catch, dentro desse catch
@@ -108,7 +108,7 @@ existe outro try que lança outra exceção RuntimeException que será executado
 segundo catch onde é checada a exceção,depois é checada a exceção do primeiro
 catch e por ultimo será executada uma saida.
 
-# Questão 12
+# Questão 13
 
 a)  
 
