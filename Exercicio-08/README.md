@@ -16,4 +16,8 @@ Essa classe não vai ser compilada
 
 ## Questão 06
 
+Porque quando se faz o new em FiguraGeometrica[10] estamos criando uma lista
+em vez de um objeto.Pois uma classe abstrata serve apenas para demonstrar quais
+métodos devem ser criados (substituídos) para que o objeto fique completo
+
 

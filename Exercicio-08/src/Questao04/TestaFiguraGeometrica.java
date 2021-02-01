@@ -3,6 +3,9 @@ package Questao04;
 public class TestaFiguraGeometrica {
     public static void main(String[] args) {
 
+        FiguraGeometrica[] figuraGeometrica = new FiguraGeometrica[10];
+
+        figuraGeometrica.
         Retangulo retangulo = new Retangulo();
         retangulo.setBase(4);
         retangulo.setAltura(2);
